@@ -1,0 +1,66 @@
+---- Minecraft Crash Report ----
+// Don't be sad, have a hug! <3
+
+Time: 1/18/21, 12:51 AM
+Description: Exception in server tick loop
+
+java.lang.OutOfMemoryError: Java heap space
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- System Details --
+Details:
+	Minecraft Version: 1.16.4
+	Minecraft Version ID: 1.16.4
+	Operating System: Linux (amd64) version 5.4.0-58-generic
+	Java Version: 11.0.9.1, Ubuntu
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode, sharing), Ubuntu
+	Memory: 2291152 bytes (2 MB) / 1008730112 bytes (962 MB) up to 1008730112 bytes (962 MB)
+	CPUs: 4
+	JVM Flags: 0 total; 
+	ModLauncher: 8.0.6+85+master.325de55
+	ModLauncher launch target: fmlserver
+	ModLauncher naming: srg
+	ModLauncher services: 
+		/mixin-0.8.2.jar mixin PLUGINSERVICE 
+		/eventbus-3.0.5-service.jar eventbus PLUGINSERVICE 
+		/forge-1.16.4-35.1.10.jar object_holder_definalize PLUGINSERVICE 
+		/forge-1.16.4-35.1.10.jar runtime_enum_extender PLUGINSERVICE 
+		/forge-1.16.4-35.1.10.jar capability_inject_definalize PLUGINSERVICE 
+		/accesstransformers-2.2.0-shadowed.jar accesstransformer PLUGINSERVICE 
+		/forge-1.16.4-35.1.10.jar runtimedistcleaner PLUGINSERVICE 
+		/mixin-0.8.2.jar mixin TRANSFORMATIONSERVICE 
+		/forge-1.16.4-35.1.10.jar fml TRANSFORMATIONSERVICE 
+	FML: 35.1
+	Forge: net.minecraftforge:35.1.10
+	FML Language Providers: 
+		javafml@35.1
+		minecraft@1
+	Mod List: 
+		forge-1.16.4-35.1.10-server.jar                   |Minecraft                     |minecraft                     |1.16.4              |DONE      |NOSIGNATURE
+		TreeChop-1.16.4-0.11.3.jar                        |treechop                      |treechop                      |0.11.3              |DONE      |NOSIGNATURE
+		decorative_blocks-1.16.4-1.7.2.jar                |Decorative Blocks             |decorative_blocks             |1.7.2               |DONE      |NOSIGNATURE
+		structurize-0.13.96-ALPHA-universal.jar           |Structurize                   |structurize                   |0.13.96-ALPHA       |DONE      |NOSIGNATURE
+		pamhc2trees-1.16.3-1.0.0.jar                      |Pam's HarvestCraft 2 Fruit Tre|pamhc2trees                   |1.0.0               |DONE      |NOSIGNATURE
+		BiomesOPlenty-1.16.4-13.0.0.428-universal.jar     |Biomes O' Plenty              |biomesoplenty                 |1.16.4-13.0.0.428   |DONE      |NOSIGNATURE
+		minecolonies-0.13.437-RELEASE-universal.jar       |Minecolonies                  |minecolonies                  |0.13.437-RELEASE    |DONE      |NOSIGNATURE
+		SpartanWeaponry-1.16.4-2.1.0-beta-3.jar           |Spartan Weaponry              |spartanweaponry               |2.1.0 beta 3        |DONE      |NOSIGNATURE
+		pamhc2crops-1.16.3-1.0.1.jar                      |Pam's HarvestCraft 2 Crops    |pamhc2crops                   |version             |DONE      |NOSIGNATURE
+		jei-1.16.4-7.6.1.65.jar                           |Just Enough Items             |jei                           |7.6.1.65            |DONE      |NOSIGNATURE
+		pamhc2foodextended-1.16.3-1.0.0.jar               |Pam's HarvestCraft 2 Food Exte|pamhc2foodextended            |version             |DONE      |NOSIGNATURE
+		forge-1.16.4-35.1.10-universal.jar                |Forge                         |forge                         |35.1.10             |DONE      |22:af:21:d8:19:82:7f:93:94:fe:2b:ac:b7:e4:41:57:68:39:87:b1:a7:5c:c6:44:f9:25:74:21:14:f5:0d:90
+		supplementaries-0.9.21c.jar                       |Supplementaries               |supplementaries               |0.9.21c             |DONE      |NOSIGNATURE
+		create-mc1.16.3_v0.3e.jar                         |Create                        |create                        |mc1.16.3_v0.3e      |DONE      |NOSIGNATURE
+		pamhc2foodcore-1.16.3-1.0.0.jar                   |Pam's HarvestCraft 2 Food Core|pamhc2foodcore                |version             |DONE      |NOSIGNATURE
+		citadel-1.5.3.jar                                 |Citadel                       |citadel                       |1.5.3               |DONE      |NOSIGNATURE
+		alexsmobs-1.4.1.jar                               |Alex's Mobs                   |alexsmobs                     |1.4.1               |DONE      |NOSIGNATURE
+		rats-7.0.5-1.16.3.jar                             |Rats                          |rats                          |7.0.5               |DONE      |NOSIGNATURE
+		ratlantis-1.0.0-1.16.3.jar                        |Rats: Ratlantis               |ratlantis                     |1.0.0-1.16.3        |DONE      |NOSIGNATURE
+		TravelersBackpack-1.16.4-5.3.8.jar                |Traveler's Backpack           |travelersbackpack             |5.3.8               |DONE      |NOSIGNATURE
+	Crash Report UUID: 92bd779b-f4df-41b2-b941-d8fb954aaf4a
+	Player Count: 5 / 20; [ServerPlayerEntity['LightningMirage'/1535, l='ServerLevel[world]', x=311.67, y=68.00, z=-119.81], ServerPlayerEntity['Cheesewaffle4'/265, l='ServerLevel[world]', x=315.18, y=68.00, z=-119.70], ServerPlayerEntity['Oshawott83'/3467, l='ServerLevel[world]', x=649.35, y=13.00, z=-553.56], ServerPlayerEntity['BaconBiscuit'/3376, l='ServerLevel[world]', x=310.52, y=68.00, z=-117.14], ServerPlayerEntity['crtrcrtrcrtr'/248, l='ServerLevel[world]', x=454.48, y=67.00, z=423.29]]
+	Data Packs: vanilla, mod:treechop, mod:decorative_blocks, mod:structurize, mod:pamhc2trees (incompatible), mod:biomesoplenty, mod:minecolonies (incompatible), mod:spartanweaponry, mod:pamhc2crops (incompatible), mod:jei, mod:pamhc2foodextended (incompatible), mod:forge, mod:supplementaries, mod:create (incompatible), mod:pamhc2foodcore (incompatible), mod:citadel (incompatible), mod:alexsmobs, mod:rats, mod:ratlantis, mod:travelersbackpack (incompatible)
+	Is Modded: Definitely; Server brand changed to 'forge'
+	Type: Dedicated Server (map_server.txt)

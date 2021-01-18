@@ -1,0 +1,138 @@
+---- Minecraft Crash Report ----
+// My bad.
+
+Time: 1/17/21, 8:22 PM
+Description: Mod loading error has occurred
+
+java.lang.Exception: Mod Loading has failed
+	at net.minecraftforge.fml.CrashReportExtender.dumpModLoadingCrashReport(CrashReportExtender.java:85) ~[forge:?] {re:classloading}
+	at net.minecraftforge.fml.server.ServerModLoader.load(ServerModLoader.java:51) ~[forge:?] {re:classloading}
+	at net.minecraft.server.Main.main(Main.java:95) ~[?:?] {re:classloading}
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?] {}
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:?] {}
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?] {}
+	at java.lang.reflect.Method.invoke(Method.java:566) ~[?:?] {}
+	at net.minecraftforge.fml.loading.FMLServerLaunchProvider.lambda$launchService$0(FMLServerLaunchProvider.java:51) ~[forge-1.16.4-35.1.10.jar:35.1] {}
+	at cpw.mods.modlauncher.LaunchServiceHandlerDecorator.launch(LaunchServiceHandlerDecorator.java:37) [modlauncher-8.0.6.jar:?] {}
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:54) [modlauncher-8.0.6.jar:?] {}
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:72) [modlauncher-8.0.6.jar:?] {}
+	at cpw.mods.modlauncher.Launcher.run(Launcher.java:82) [modlauncher-8.0.6.jar:?] {}
+	at cpw.mods.modlauncher.Launcher.main(Launcher.java:66) [modlauncher-8.0.6.jar:?] {}
+	at net.minecraftforge.server.ServerMain$Runner.runLauncher(ServerMain.java:63) [forge-1.16.4-35.1.10.jar:?] {}
+	at net.minecraftforge.server.ServerMain$Runner.access$100(ServerMain.java:60) [forge-1.16.4-35.1.10.jar:?] {}
+	at net.minecraftforge.server.ServerMain.main(ServerMain.java:57) [forge-1.16.4-35.1.10.jar:?] {}
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: main
+Stacktrace:
+	at org.objectweb.asm.MethodWriter.computeAllFrames(MethodWriter.java:1572) ~[asm-7.2.jar:7.2] {}
+-- MOD create --
+Details:
+	Caused by 0: java.lang.ExceptionInInitializerError
+		at java.lang.Class.forName0(Native Method) ~[?:?] {}
+		at java.lang.Class.forName(Class.java:398) ~[?:?] {}
+		at net.minecraftforge.fml.AutomaticEventSubscriber.lambda$inject$6(AutomaticEventSubscriber.java:75) ~[forge:?] {re:classloading}
+		at java.util.ArrayList.forEach(ArrayList.java:1541) ~[?:?] {}
+		at net.minecraftforge.fml.AutomaticEventSubscriber.inject(AutomaticEventSubscriber.java:62) ~[forge:?] {re:classloading}
+		at net.minecraftforge.fml.javafmlmod.FMLModContainer.constructMod(FMLModContainer.java:91) ~[forge:35.1] {re:classloading}
+		at net.minecraftforge.fml.ModContainer.lambda$buildTransitionHandler$4(ModContainer.java:120) ~[forge:?] {re:classloading}
+		at java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1736) ~[?:?] {}
+		at java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1728) ~[?:?] {}
+		at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:290) ~[?:?] {}
+		at java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1020) ~[?:?] {}
+		at java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1656) ~[?:?] {}
+		at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1594) ~[?:?] {}
+		at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:183) ~[?:?] {}
+
+	Mod File: create-mc1.16.3_v0.3e.jar
+	Failure message: Create (create) has failed to load correctly
+		java.lang.ExceptionInInitializerError: null
+	Mod Version: mc1.16.3_v0.3e
+	Mod Issue URL: NOT PROVIDED
+	Exception message: java.lang.NullPointerException
+Stacktrace:
+	at org.objectweb.asm.MethodWriter.computeAllFrames(MethodWriter.java:1572) ~[asm-7.2.jar:7.2] {}
+	at org.objectweb.asm.MethodWriter.visitMaxs(MethodWriter.java:1546) ~[asm-7.2.jar:7.2] {}
+	at org.objectweb.asm.tree.MethodNode.accept(MethodNode.java:767) ~[asm-tree-7.2.jar:7.2] {}
+	at org.objectweb.asm.tree.MethodNode.accept(MethodNode.java:647) ~[asm-tree-7.2.jar:7.2] {}
+	at org.objectweb.asm.tree.ClassNode.accept(ClassNode.java:408) ~[asm-tree-7.2.jar:7.2] {}
+	at cpw.mods.modlauncher.ClassTransformer.transform(ClassTransformer.java:132) ~[modlauncher-8.0.6.jar:?] {}
+	at cpw.mods.modlauncher.TransformingClassLoader$DelegatedClassLoader.findClass(TransformingClassLoader.java:265) ~[modlauncher-8.0.6.jar:?] {}
+	at cpw.mods.modlauncher.TransformingClassLoader.loadClass(TransformingClassLoader.java:136) ~[modlauncher-8.0.6.jar:?] {re:classloading}
+	at cpw.mods.modlauncher.TransformingClassLoader.loadClass(TransformingClassLoader.java:98) ~[modlauncher-8.0.6.jar:?] {re:classloading}
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:522) ~[?:?] {}
+	at net.minecraft.entity.Entity.<clinit>(Entity.java:169) ~[?:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at java.lang.Class.forName0(Native Method) ~[?:?] {}
+	at java.lang.Class.forName(Class.java:398) ~[?:?] {}
+	at net.minecraftforge.fml.AutomaticEventSubscriber.lambda$inject$6(AutomaticEventSubscriber.java:75) ~[forge:?] {re:classloading}
+	at java.util.ArrayList.forEach(ArrayList.java:1541) ~[?:?] {}
+	at net.minecraftforge.fml.AutomaticEventSubscriber.inject(AutomaticEventSubscriber.java:62) ~[forge:?] {re:classloading}
+	at net.minecraftforge.fml.javafmlmod.FMLModContainer.constructMod(FMLModContainer.java:91) ~[forge:35.1] {re:classloading}
+	at net.minecraftforge.fml.ModContainer.lambda$buildTransitionHandler$4(ModContainer.java:120) ~[forge:?] {re:classloading}
+	at java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1736) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1728) ~[?:?] {}
+	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:290) ~[?:?] {}
+	at java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1020) ~[?:?] {}
+	at java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1656) ~[?:?] {}
+	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1594) ~[?:?] {}
+	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:183) ~[?:?] {}
+
+
+-- System Details --
+Details:
+	Minecraft Version: 1.16.4
+	Minecraft Version ID: 1.16.4
+	Operating System: Linux (amd64) version 5.4.0-58-generic
+	Java Version: 11.0.9.1, Ubuntu
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode, sharing), Ubuntu
+	Memory: 281118720 bytes (268 MB) / 544210944 bytes (519 MB) up to 1008730112 bytes (962 MB)
+	CPUs: 4
+	JVM Flags: 0 total; 
+	ModLauncher: 8.0.6+85+master.325de55
+	ModLauncher launch target: fmlserver
+	ModLauncher naming: srg
+	ModLauncher services: 
+		/mixin-0.8.2.jar mixin PLUGINSERVICE 
+		/eventbus-3.0.5-service.jar eventbus PLUGINSERVICE 
+		/forge-1.16.4-35.1.10.jar object_holder_definalize PLUGINSERVICE 
+		/forge-1.16.4-35.1.10.jar runtime_enum_extender PLUGINSERVICE 
+		/forge-1.16.4-35.1.10.jar capability_inject_definalize PLUGINSERVICE 
+		/accesstransformers-2.2.0-shadowed.jar accesstransformer PLUGINSERVICE 
+		/forge-1.16.4-35.1.10.jar runtimedistcleaner PLUGINSERVICE 
+		/mixin-0.8.2.jar mixin TRANSFORMATIONSERVICE 
+		/OptiForge-MC1.16.4-0.4.6.jar OptiFine TRANSFORMATIONSERVICE 
+		/OptiForge-MC1.16.4-0.4.6.jar optiforge TRANSFORMATIONSERVICE 
+		/forge-1.16.4-35.1.10.jar fml TRANSFORMATIONSERVICE 
+		/OptiForge-MC1.16.4-0.4.6.jar optiforgewrapper TRANSFORMATIONSERVICE 
+	FML: 35.1
+	Forge: net.minecraftforge:35.1.10
+	FML Language Providers: 
+		javafml@35.1
+		minecraft@1
+	Mod List: 
+		forge-1.16.4-35.1.10-server.jar                   |Minecraft                     |minecraft                     |1.16.4              |CREATE_REG|NOSIGNATURE
+		TreeChop-1.16.4-0.11.3.jar                        |treechop                      |treechop                      |0.11.3              |CREATE_REG|NOSIGNATURE
+		decorative_blocks-1.16.4-1.7.2.jar                |Decorative Blocks             |decorative_blocks             |1.7.2               |CREATE_REG|NOSIGNATURE
+		structurize-0.13.96-ALPHA-universal.jar           |Structurize                   |structurize                   |0.13.96-ALPHA       |CREATE_REG|NOSIGNATURE
+		pamhc2trees-1.16.3-1.0.0.jar                      |Pam's HarvestCraft 2 Fruit Tre|pamhc2trees                   |1.0.0               |CREATE_REG|NOSIGNATURE
+		BiomesOPlenty-1.16.4-13.0.0.428-universal.jar     |Biomes O' Plenty              |biomesoplenty                 |1.16.4-13.0.0.428   |CREATE_REG|NOSIGNATURE
+		minecolonies-0.13.437-RELEASE-universal.jar       |Minecolonies                  |minecolonies                  |0.13.437-RELEASE    |CREATE_REG|NOSIGNATURE
+		SpartanWeaponry-1.16.4-2.1.0-beta-3.jar           |Spartan Weaponry              |spartanweaponry               |2.1.0 beta 3        |CREATE_REG|NOSIGNATURE
+		pamhc2crops-1.16.3-1.0.1.jar                      |Pam's HarvestCraft 2 Crops    |pamhc2crops                   |version             |CREATE_REG|NOSIGNATURE
+		betterwithminecolonies-1.16.4-1.16.17.jar         |Better With Minecolonies      |betterwithminecolonies        |1.16.4-1.16.17      |CREATE_REG|NOSIGNATURE
+		jei-1.16.4-7.6.1.65.jar                           |Just Enough Items             |jei                           |7.6.1.65            |CREATE_REG|NOSIGNATURE
+		pamhc2foodextended-1.16.3-1.0.0.jar               |Pam's HarvestCraft 2 Food Exte|pamhc2foodextended            |version             |CREATE_REG|NOSIGNATURE
+		forge-1.16.4-35.1.10-universal.jar                |Forge                         |forge                         |35.1.10             |CREATE_REG|22:af:21:d8:19:82:7f:93:94:fe:2b:ac:b7:e4:41:57:68:39:87:b1:a7:5c:c6:44:f9:25:74:21:14:f5:0d:90
+		supplementaries-0.9.21c.jar                       |Supplementaries               |supplementaries               |0.9.21c             |CREATE_REG|NOSIGNATURE
+		create-mc1.16.3_v0.3e.jar                         |Create                        |create                        |mc1.16.3_v0.3e      |ERROR     |NOSIGNATURE
+		pamhc2foodcore-1.16.3-1.0.0.jar                   |Pam's HarvestCraft 2 Food Core|pamhc2foodcore                |version             |CREATE_REG|NOSIGNATURE
+		citadel-1.5.3.jar                                 |Citadel                       |citadel                       |1.5.3               |CREATE_REG|NOSIGNATURE
+		alexsmobs-1.4.1.jar                               |Alex's Mobs                   |alexsmobs                     |1.4.1               |CREATE_REG|NOSIGNATURE
+		rats-7.0.5-1.16.3.jar                             |Rats                          |rats                          |7.0.5               |CREATE_REG|NOSIGNATURE
+		ratlantis-1.0.0-1.16.3.jar                        |Rats: Ratlantis               |ratlantis                     |1.0.0-1.16.3        |CREATE_REG|NOSIGNATURE
+		TravelersBackpack-1.16.4-5.3.8.jar                |Traveler's Backpack           |travelersbackpack             |5.3.8               |CREATE_REG|NOSIGNATURE
+	Crash Report UUID: dbaf8905-1a6a-440c-80a1-c0f11474518b

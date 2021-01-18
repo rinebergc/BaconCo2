@@ -1,0 +1,537 @@
+---- Minecraft Crash Report ----
+// Ouch. That hurt :(
+
+Time: 1/18/21, 2:05 PM
+Description: Watching Server
+
+java.lang.Error: ServerHangWatchdog detected that a single server tick took 328.92 seconds (should be max 0.05)
+	at java.util.stream.ReferencePipeline.filter(ReferencePipeline.java:164) ~[?:?] {}
+	at net.minecraft.entity.ai.goal.GoalSelector.func_220888_c(SourceFile:97) ~[?:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.entity.ai.goal.GoalSelector.func_75774_a(SourceFile:88) ~[?:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.entity.MobEntity.func_70626_be(MobEntity.java:679) ~[?:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.entity.LivingEntity.func_70636_d(LivingEntity.java:2411) ~[?:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.entity.MobEntity.func_70636_d(MobEntity.java:488) ~[?:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.entity.AgeableEntity.func_70636_d(SourceFile:127) ~[?:?] {re:classloading}
+	at net.minecraft.entity.passive.AnimalEntity.func_70636_d(AnimalEntity.java:51) ~[?:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.entity.passive.WolfEntity.func_70636_d(WolfEntity.java:162) ~[?:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.entity.LivingEntity.func_70071_h_(LivingEntity.java:2158) ~[?:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.entity.MobEntity.func_70071_h_(MobEntity.java:300) ~[?:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.entity.passive.WolfEntity.func_70071_h_(WolfEntity.java:177) ~[?:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.world.server.ServerWorld.func_217479_a(ServerWorld.java:611) ~[?:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.world.server.ServerWorld$$Lambda$7703/0x000000084148e440.accept(Unknown Source) ~[?:?] {}
+	at net.minecraft.world.World.func_217390_a(World.java:554) ~[?:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.world.server.ServerWorld.func_72835_b(ServerWorld.java:404) ~[?:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.server.MinecraftServer.func_71190_q(MinecraftServer.java:850) ~[?:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.server.dedicated.DedicatedServer.func_71190_q(DedicatedServer.java:291) ~[?:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.MinecraftServer.func_71217_p(MinecraftServer.java:786) ~[?:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.server.MinecraftServer.func_240802_v_(MinecraftServer.java:641) ~[?:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.server.MinecraftServer.lambda$startServer$0(MinecraftServer.java:232) ~[?:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.server.MinecraftServer$$Lambda$7044/0x00000008412f2840.run(Unknown Source) ~[?:?] {}
+	at java.lang.Thread.run(Thread.java:834) [?:?] {}
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Server Watchdog
+Stacktrace:
+	at java.util.stream.ReferencePipeline.filter(ReferencePipeline.java:164) ~[?:?] {}
+	at net.minecraft.entity.ai.goal.GoalSelector.func_220888_c(SourceFile:97) ~[?:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.entity.ai.goal.GoalSelector.func_75774_a(SourceFile:88) ~[?:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.entity.MobEntity.func_70626_be(MobEntity.java:679) ~[?:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.entity.LivingEntity.func_70636_d(LivingEntity.java:2411) ~[?:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.entity.MobEntity.func_70636_d(MobEntity.java:488) ~[?:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.entity.AgeableEntity.func_70636_d(SourceFile:127) ~[?:?] {re:classloading}
+	at net.minecraft.entity.passive.AnimalEntity.func_70636_d(AnimalEntity.java:51) ~[?:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.entity.passive.WolfEntity.func_70636_d(WolfEntity.java:162) ~[?:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.entity.LivingEntity.func_70071_h_(LivingEntity.java:2158) ~[?:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.entity.MobEntity.func_70071_h_(MobEntity.java:300) ~[?:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.entity.passive.WolfEntity.func_70071_h_(WolfEntity.java:177) ~[?:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.world.server.ServerWorld.func_217479_a(ServerWorld.java:611) ~[?:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.world.server.ServerWorld$$Lambda$7703/0x000000084148e440.accept(Unknown Source) ~[?:?] {}
+	at net.minecraft.world.World.func_217390_a(World.java:554) ~[?:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.world.server.ServerWorld.func_72835_b(ServerWorld.java:404) ~[?:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.server.MinecraftServer.func_71190_q(MinecraftServer.java:850) ~[?:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.server.dedicated.DedicatedServer.func_71190_q(DedicatedServer.java:291) ~[?:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.MinecraftServer.func_71217_p(MinecraftServer.java:786) ~[?:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.server.MinecraftServer.func_240802_v_(MinecraftServer.java:641) ~[?:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.server.MinecraftServer.lambda$startServer$0(MinecraftServer.java:232) ~[?:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+-- Thread Dump --
+Details:
+	Threads: "Reference Handler" daemon prio=10 Id=2 RUNNABLE
+	at java.base@11.0.9.1/java.lang.ref.Reference.waitForReferencePendingList(Native Method)
+	at java.base@11.0.9.1/java.lang.ref.Reference.processPendingReferences(Reference.java:241)
+	at java.base@11.0.9.1/java.lang.ref.Reference$ReferenceHandler.run(Reference.java:213)
+
+
+"Finalizer" daemon prio=8 Id=3 WAITING on java.lang.ref.ReferenceQueue$Lock@674d5328
+	at java.base@11.0.9.1/java.lang.Object.wait(Native Method)
+	-  waiting on java.lang.ref.ReferenceQueue$Lock@674d5328
+	at java.base@11.0.9.1/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:155)
+	at java.base@11.0.9.1/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:176)
+	at java.base@11.0.9.1/java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:170)
+
+
+"Signal Dispatcher" daemon prio=9 Id=4 RUNNABLE
+
+
+"Common-Cleaner" daemon prio=8 Id=10 TIMED_WAITING on java.lang.ref.ReferenceQueue$Lock@698ab1b1
+	at java.base@11.0.9.1/java.lang.Object.wait(Native Method)
+	-  waiting on java.lang.ref.ReferenceQueue$Lock@698ab1b1
+	at java.base@11.0.9.1/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:155)
+	at java.base@11.0.9.1/jdk.internal.ref.CleanerImpl.run(CleanerImpl.java:148)
+	at java.base@11.0.9.1/java.lang.Thread.run(Thread.java:834)
+	at java.base@11.0.9.1/jdk.internal.misc.InnocuousThread.run(InnocuousThread.java:134)
+
+
+"ForkJoinPool.commonPool-worker-3" daemon prio=5 Id=17 WAITING on java.util.concurrent.ForkJoinPool@6db53858
+	at java.base@11.0.9.1/jdk.internal.misc.Unsafe.park(Native Method)
+	-  waiting on java.util.concurrent.ForkJoinPool@6db53858
+	at java.base@11.0.9.1/java.util.concurrent.locks.LockSupport.park(LockSupport.java:194)
+	at java.base@11.0.9.1/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1628)
+	at java.base@11.0.9.1/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:183)
+
+
+"Thread-0" daemon prio=5 Id=18 TIMED_WAITING
+	at java.base@11.0.9.1/jdk.internal.misc.Unsafe.park(Native Method)
+	at java.base@11.0.9.1/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:357)
+	at app//com.electronwill.nightconfig.core.file.FileWatcher$WatcherThread.run(FileWatcher.java:190)
+
+
+"FileSystemWatchService" daemon prio=5 Id=19 RUNNABLE (in native)
+	at java.base@11.0.9.1/sun.nio.fs.LinuxWatchService.poll(Native Method)
+	at java.base@11.0.9.1/sun.nio.fs.LinuxWatchService$Poller.run(LinuxWatchService.java:316)
+	at java.base@11.0.9.1/java.lang.Thread.run(Thread.java:834)
+
+
+"Worker-Bootstrap-2" daemon prio=5 Id=22 WAITING on java.util.concurrent.ForkJoinPool@28b7bb8a
+	at java.base@11.0.9.1/jdk.internal.misc.Unsafe.park(Native Method)
+	-  waiting on java.util.concurrent.ForkJoinPool@28b7bb8a
+	at java.base@11.0.9.1/java.util.concurrent.locks.LockSupport.park(LockSupport.java:194)
+	at java.base@11.0.9.1/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1628)
+	at java.base@11.0.9.1/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:183)
+
+
+"Timer hack thread" daemon prio=5 Id=24 TIMED_WAITING
+	at java.base@11.0.9.1/java.lang.Thread.sleep(Native Method)
+	at net.minecraft.util.Util$6.run(SourceFile:636)
+
+
+"modloading-worker-1" daemon prio=5 Id=25 WAITING on java.util.concurrent.ForkJoinPool@25ee79a7
+	at java.base@11.0.9.1/jdk.internal.misc.Unsafe.park(Native Method)
+	-  waiting on java.util.concurrent.ForkJoinPool@25ee79a7
+	at java.base@11.0.9.1/java.util.concurrent.locks.LockSupport.park(LockSupport.java:194)
+	at java.base@11.0.9.1/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1628)
+	at java.base@11.0.9.1/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:183)
+
+
+"FileSystemWatchService" daemon prio=5 Id=29 RUNNABLE (in native)
+	at java.base@11.0.9.1/sun.nio.fs.LinuxWatchService.poll(Native Method)
+	at java.base@11.0.9.1/sun.nio.fs.LinuxWatchService$Poller.run(LinuxWatchService.java:316)
+	at java.base@11.0.9.1/java.lang.Thread.run(Thread.java:834)
+
+
+"Worker-Main-4" daemon prio=5 Id=33 TIMED_WAITING on java.util.concurrent.ForkJoinPool@19d55392
+	at java.base@11.0.9.1/jdk.internal.misc.Unsafe.park(Native Method)
+	-  waiting on java.util.concurrent.ForkJoinPool@19d55392
+	at java.base@11.0.9.1/java.util.concurrent.locks.LockSupport.parkUntil(LockSupport.java:275)
+	at java.base@11.0.9.1/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1619)
+	at java.base@11.0.9.1/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:183)
+
+
+"Worker-Main-6" daemon prio=5 Id=35 WAITING on java.util.concurrent.ForkJoinPool@19d55392
+	at java.base@11.0.9.1/jdk.internal.misc.Unsafe.park(Native Method)
+	-  waiting on java.util.concurrent.ForkJoinPool@19d55392
+	at java.base@11.0.9.1/java.util.concurrent.locks.LockSupport.park(LockSupport.java:194)
+	at java.base@11.0.9.1/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1628)
+	at java.base@11.0.9.1/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:183)
+
+
+"Snooper Timer" daemon prio=5 Id=37 WAITING on java.util.TaskQueue@5d66cf08
+	at java.base@11.0.9.1/java.lang.Object.wait(Native Method)
+	-  waiting on java.util.TaskQueue@5d66cf08
+	at java.base@11.0.9.1/java.lang.Object.wait(Object.java:328)
+	at java.base@11.0.9.1/java.util.TimerThread.mainLoop(Timer.java:527)
+	at java.base@11.0.9.1/java.util.TimerThread.run(Timer.java:506)
+
+
+"Server thread" prio=5 Id=36 RUNNABLE
+	at java.base@11.0.9.1/java.util.stream.ReferencePipeline.filter(ReferencePipeline.java:164)
+	at net.minecraft.entity.ai.goal.GoalSelector.func_220888_c(SourceFile:97)
+	at net.minecraft.entity.ai.goal.GoalSelector.func_75774_a(SourceFile:88)
+	at net.minecraft.entity.MobEntity.func_70626_be(MobEntity.java:679)
+	at net.minecraft.entity.LivingEntity.func_70636_d(LivingEntity.java:2411)
+	at net.minecraft.entity.MobEntity.func_70636_d(MobEntity.java:488)
+	at net.minecraft.entity.AgeableEntity.func_70636_d(SourceFile:127)
+	at net.minecraft.entity.passive.AnimalEntity.func_70636_d(AnimalEntity.java:51)
+	...
+
+
+"DestroyJavaVM" prio=5 Id=39 RUNNABLE
+
+
+"ObjectCleanerThread" daemon prio=1 Id=42 TIMED_WAITING on java.lang.ref.ReferenceQueue$Lock@489844c5
+	at java.base@11.0.9.1/java.lang.Object.wait(Native Method)
+	-  waiting on java.lang.ref.ReferenceQueue$Lock@489844c5
+	at java.base@11.0.9.1/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:155)
+	at app//io.netty.util.internal.ObjectCleaner$1.run(ObjectCleaner.java:54)
+	at app//io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base@11.0.9.1/java.lang.Thread.run(Thread.java:834)
+
+
+"Netty Epoll Server IO #0" daemon prio=5 Id=43 RUNNABLE
+	at app//io.netty.channel.DefaultChannelPipeline.<init>(DefaultChannelPipeline.java:98)
+	at app//io.netty.channel.AbstractChannel.newChannelPipeline(AbstractChannel.java:118)
+	at app//io.netty.channel.AbstractChannel.<init>(AbstractChannel.java:85)
+	at app//io.netty.channel.epoll.AbstractEpollChannel.<init>(AbstractEpollChannel.java:101)
+	at app//io.netty.channel.epoll.AbstractEpollStreamChannel.<init>(AbstractEpollStreamChannel.java:108)
+	at app//io.netty.channel.epoll.EpollSocketChannel.<init>(EpollSocketChannel.java:60)
+	at app//io.netty.channel.epoll.EpollServerSocketChannel.newChildChannel(EpollServerSocketChannel.java:95)
+	at app//io.netty.channel.epoll.AbstractEpollServerChannel$EpollServerSocketUnsafe.epollInReady(AbstractEpollServerChannel.java:120)
+	...
+
+
+"FileSystemWatchService" daemon prio=5 Id=44 RUNNABLE (in native)
+	at java.base@11.0.9.1/sun.nio.fs.LinuxWatchService.poll(Native Method)
+	at java.base@11.0.9.1/sun.nio.fs.LinuxWatchService$Poller.run(LinuxWatchService.java:316)
+	at java.base@11.0.9.1/java.lang.Thread.run(Thread.java:834)
+
+
+"Server Watchdog" daemon prio=5 Id=50 RUNNABLE
+	at java.management@11.0.9.1/sun.management.ThreadImpl.dumpThreads0(Native Method)
+	at java.management@11.0.9.1/sun.management.ThreadImpl.dumpAllThreads(ThreadImpl.java:521)
+	at java.management@11.0.9.1/sun.management.ThreadImpl.dumpAllThreads(ThreadImpl.java:509)
+	at net.minecraft.server.dedicated.ServerHangWatchdog.run(ServerHangWatchdog.java:41)
+	at java.base@11.0.9.1/java.lang.Thread.run(Thread.java:834)
+
+
+"Netty Epoll Server IO #1" daemon prio=5 Id=51 RUNNABLE
+	at app//io.netty.channel.DefaultChannelPipeline.callHandlerAddedForAllHandlers(DefaultChannelPipeline.java:1146)
+	-  locked io.netty.channel.DefaultChannelPipeline@1e6d3f30
+	at app//io.netty.channel.DefaultChannelPipeline.invokeHandlerAddedIfNeeded(DefaultChannelPipeline.java:686)
+	at app//io.netty.channel.AbstractChannel$AbstractUnsafe.register0(AbstractChannel.java:510)
+	at app//io.netty.channel.AbstractChannel$AbstractUnsafe.access$200(AbstractChannel.java:423)
+	at app//io.netty.channel.AbstractChannel$AbstractUnsafe$1.run(AbstractChannel.java:482)
+	at app//io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:163)
+	at app//io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:404)
+	at app//io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:313)
+	...
+
+
+"Netty Epoll Server IO #2" daemon prio=5 Id=52 RUNNABLE
+	at app//io.netty.channel.DefaultChannelPipeline.callHandlerAddedForAllHandlers(DefaultChannelPipeline.java:1146)
+	-  locked io.netty.channel.DefaultChannelPipeline@2d17b6ac
+	at app//io.netty.channel.DefaultChannelPipeline.invokeHandlerAddedIfNeeded(DefaultChannelPipeline.java:686)
+	at app//io.netty.channel.AbstractChannel$AbstractUnsafe.register0(AbstractChannel.java:510)
+	at app//io.netty.channel.AbstractChannel$AbstractUnsafe.access$200(AbstractChannel.java:423)
+	at app//io.netty.channel.AbstractChannel$AbstractUnsafe$1.run(AbstractChannel.java:482)
+	at app//io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:163)
+	at app//io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:404)
+	at app//io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:313)
+	...
+
+
+"Netty Epoll Server IO #3" daemon prio=5 Id=53 RUNNABLE
+	at app//io.netty.channel.DefaultChannelPipeline.callHandlerAddedForAllHandlers(DefaultChannelPipeline.java:1146)
+	-  locked io.netty.channel.DefaultChannelPipeline@46622289
+	at app//io.netty.channel.DefaultChannelPipeline.invokeHandlerAddedIfNeeded(DefaultChannelPipeline.java:686)
+	at app//io.netty.channel.AbstractChannel$AbstractUnsafe.register0(AbstractChannel.java:510)
+	at app//io.netty.channel.AbstractChannel$AbstractUnsafe.access$200(AbstractChannel.java:423)
+	at app//io.netty.channel.AbstractChannel$AbstractUnsafe$1.run(AbstractChannel.java:482)
+	at app//io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:163)
+	at app//io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:404)
+	at app//io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:313)
+	...
+
+
+"Rats Pathfinding Worker #0" daemon prio=5 Id=57 WAITING on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@4cd6f8ec
+	at java.base@11.0.9.1/jdk.internal.misc.Unsafe.park(Native Method)
+	-  waiting on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@4cd6f8ec
+	at java.base@11.0.9.1/java.util.concurrent.locks.LockSupport.park(LockSupport.java:194)
+	at java.base@11.0.9.1/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2081)
+	at java.base@11.0.9.1/java.util.concurrent.LinkedBlockingDeque.takeFirst(LinkedBlockingDeque.java:483)
+	at java.base@11.0.9.1/java.util.concurrent.LinkedBlockingDeque.take(LinkedBlockingDeque.java:671)
+	at java.base@11.0.9.1/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1054)
+	at java.base@11.0.9.1/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1114)
+	at java.base@11.0.9.1/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	...
+
+
+"SIGCONT handler" daemon prio=9 Id=61 WAITING on java.lang.ProcessImpl@3b35daf9
+	at java.base@11.0.9.1/java.lang.Object.wait(Native Method)
+	-  waiting on java.lang.ProcessImpl@3b35daf9
+	at java.base@11.0.9.1/java.lang.Object.wait(Object.java:328)
+	at java.base@11.0.9.1/java.lang.ProcessImpl.waitFor(ProcessImpl.java:495)
+	at app//org.jline.utils.ExecHelper.waitAndCapture(ExecHelper.java:66)
+	at app//org.jline.utils.ExecHelper.exec(ExecHelper.java:36)
+	at app//org.jline.terminal.impl.ExecPty.doGetConfig(ExecPty.java:175)
+	at app//org.jline.terminal.impl.ExecPty.getAttr(ExecPty.java:87)
+	at app//org.jline.terminal.impl.ExecPty.doSetAttr(ExecPty.java:93)
+	...
+
+
+"SIGHUP handler" daemon prio=9 Id=62 RUNNABLE
+	at java.base@11.0.9.1/java.lang.Thread.start0(Native Method)
+	at java.base@11.0.9.1/java.lang.Thread.start(Thread.java:803)
+	-  locked java.lang.Thread@5a01ccaa
+	at java.base@11.0.9.1/java.lang.ApplicationShutdownHooks.runHooks(ApplicationShutdownHooks.java:102)
+	at java.base@11.0.9.1/java.lang.ApplicationShutdownHooks$1.run(ApplicationShutdownHooks.java:46)
+	at java.base@11.0.9.1/java.lang.Shutdown.runHooks(Shutdown.java:130)
+	at java.base@11.0.9.1/java.lang.Shutdown.exit(Shutdown.java:174)
+	-  locked java.lang.Class@22a71081
+	at java.base@11.0.9.1/java.lang.Terminator$1.handle(Terminator.java:51)
+	at java.base@11.0.9.1/jdk.internal.misc.Signal$1.run(Signal.java:220)
+	...
+
+
+"SIGHUP handler" daemon prio=9 Id=63 BLOCKED on java.lang.Class@22a71081 owned by "SIGHUP handler" Id=62
+	at java.base@11.0.9.1/java.lang.Shutdown.exit(Shutdown.java:173)
+	-  blocked on java.lang.Class@22a71081
+	at java.base@11.0.9.1/java.lang.Terminator$1.handle(Terminator.java:51)
+	at java.base@11.0.9.1/jdk.internal.misc.Signal$1.run(Signal.java:220)
+	at java.base@11.0.9.1/java.lang.Thread.run(Thread.java:834)
+
+
+"SIGTERM handler" daemon prio=9 Id=65 BLOCKED on java.lang.Class@22a71081 owned by "SIGHUP handler" Id=62
+	at java.base@11.0.9.1/java.lang.Shutdown.exit(Shutdown.java:173)
+	-  blocked on java.lang.Class@22a71081
+	at java.base@11.0.9.1/java.lang.Terminator$1.handle(Terminator.java:51)
+	at java.base@11.0.9.1/jdk.internal.misc.Signal$1.run(Signal.java:220)
+	at java.base@11.0.9.1/java.lang.Thread.run(Thread.java:834)
+
+
+"SIGCONT handler" daemon prio=9 Id=67 RUNNABLE
+	at java.base@11.0.9.1/java.io.PrintStream.write(PrintStream.java:603)
+	-  locked net.minecraftforge.fml.loading.TracingPrintStream@2b07a9e5
+	at java.base@11.0.9.1/java.io.PrintStream.print(PrintStream.java:745)
+	at java.base@11.0.9.1/java.lang.ThreadGroup.uncaughtException(ThreadGroup.java:1057)
+	at java.base@11.0.9.1/java.lang.Thread.dispatchUncaughtException(Thread.java:2002)
+
+
+"process reaper" daemon prio=10 Id=69 RUNNABLE
+	at java.base@11.0.9.1/java.lang.ProcessImpl$ProcessPipeInputStream.processExited(ProcessImpl.java:677)
+	-  locked java.lang.ProcessImpl$ProcessPipeInputStream@7c26a066
+	at java.base@11.0.9.1/java.lang.ProcessImpl.lambda$initStreams$1(ProcessImpl.java:400)
+	at java.base@11.0.9.1/java.lang.ProcessImpl$$Lambda$72/0x0000000840128c40.apply(Unknown Source)
+	at java.base@11.0.9.1/java.util.concurrent.CompletableFuture.uniHandle(CompletableFuture.java:930)
+	at java.base@11.0.9.1/java.util.concurrent.CompletableFuture$UniHandle.tryFire(CompletableFuture.java:907)
+	at java.base@11.0.9.1/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:506)
+	at java.base@11.0.9.1/java.util.concurrent.CompletableFuture.complete(CompletableFuture.java:2073)
+	at java.base@11.0.9.1/java.lang.ProcessHandleImpl$1.run(ProcessHandleImpl.java:162)
+	...
+
+	Number of locked synchronizers = 1
+	- java.util.concurrent.ThreadPoolExecutor$Worker@34197834
+
+
+"process reaper" daemon prio=10 Id=68 RUNNABLE
+	at java.base@11.0.9.1/java.lang.ProcessImpl$ProcessPipeInputStream.processExited(ProcessImpl.java:677)
+	-  locked java.lang.ProcessImpl$ProcessPipeInputStream@7cc3696
+	at java.base@11.0.9.1/java.lang.ProcessImpl.lambda$initStreams$1(ProcessImpl.java:400)
+	at java.base@11.0.9.1/java.lang.ProcessImpl$$Lambda$72/0x0000000840128c40.apply(Unknown Source)
+	at java.base@11.0.9.1/java.util.concurrent.CompletableFuture.uniHandle(CompletableFuture.java:930)
+	at java.base@11.0.9.1/java.util.concurrent.CompletableFuture$UniHandle.tryFire(CompletableFuture.java:907)
+	at java.base@11.0.9.1/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:506)
+	at java.base@11.0.9.1/java.util.concurrent.CompletableFuture.complete(CompletableFuture.java:2073)
+	at java.base@11.0.9.1/java.lang.ProcessHandleImpl$1.run(ProcessHandleImpl.java:162)
+	...
+
+	Number of locked synchronizers = 1
+	- java.util.concurrent.ThreadPoolExecutor$Worker@49cbe4d
+
+
+"Netty Epoll Server IO #4" daemon prio=5 Id=70 RUNNABLE
+	at app//io.netty.util.concurrent.DefaultPromise.checkNotifyWaiters(DefaultPromise.java:553)
+	-  locked io.netty.channel.DefaultChannelPromise@12bbc684
+	at app//io.netty.util.concurrent.DefaultPromise.setValue0(DefaultPromise.java:546)
+	at app//io.netty.util.concurrent.DefaultPromise.setSuccess0(DefaultPromise.java:536)
+	at app//io.netty.util.concurrent.DefaultPromise.trySuccess(DefaultPromise.java:102)
+	at app//io.netty.channel.DefaultChannelPromise.trySuccess(DefaultChannelPromise.java:84)
+	at app//io.netty.channel.AbstractChannel$AbstractUnsafe.safeSetSuccess(AbstractChannel.java:978)
+	at app//io.netty.channel.AbstractChannel$AbstractUnsafe.register0(AbstractChannel.java:512)
+	at app//io.netty.channel.AbstractChannel$AbstractUnsafe.access$200(AbstractChannel.java:423)
+	...
+
+
+"Netty Epoll Server IO #5" daemon prio=5 Id=71 RUNNABLE
+	at app//io.netty.util.concurrent.DefaultPromise.checkNotifyWaiters(DefaultPromise.java:553)
+	-  locked io.netty.channel.DefaultChannelPromise@4651db7
+	at app//io.netty.util.concurrent.DefaultPromise.setValue0(DefaultPromise.java:546)
+	at app//io.netty.util.concurrent.DefaultPromise.setSuccess0(DefaultPromise.java:536)
+	at app//io.netty.util.concurrent.DefaultPromise.trySuccess(DefaultPromise.java:102)
+	at app//io.netty.channel.DefaultChannelPromise.trySuccess(DefaultChannelPromise.java:84)
+	at app//io.netty.channel.AbstractChannel$AbstractUnsafe.safeSetSuccess(AbstractChannel.java:978)
+	at app//io.netty.channel.AbstractChannel$AbstractUnsafe.register0(AbstractChannel.java:512)
+	at app//io.netty.channel.AbstractChannel$AbstractUnsafe.access$200(AbstractChannel.java:423)
+	...
+
+
+"process reaper" daemon prio=10 Id=64 RUNNABLE
+	at java.base@11.0.9.1/java.lang.ProcessImpl$ProcessPipeInputStream.processExited(ProcessImpl.java:677)
+	-  locked java.lang.ProcessImpl$ProcessPipeInputStream@4d89a8cd
+	at java.base@11.0.9.1/java.lang.ProcessImpl.lambda$initStreams$1(ProcessImpl.java:397)
+	at java.base@11.0.9.1/java.lang.ProcessImpl$$Lambda$72/0x0000000840128c40.apply(Unknown Source)
+	at java.base@11.0.9.1/java.util.concurrent.CompletableFuture.uniHandle(CompletableFuture.java:930)
+	at java.base@11.0.9.1/java.util.concurrent.CompletableFuture$UniHandle.tryFire(CompletableFuture.java:907)
+	at java.base@11.0.9.1/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:506)
+	at java.base@11.0.9.1/java.util.concurrent.CompletableFuture.complete(CompletableFuture.java:2073)
+	at java.base@11.0.9.1/java.lang.ProcessHandleImpl$1.run(ProcessHandleImpl.java:162)
+	...
+
+	Number of locked synchronizers = 1
+	- java.util.concurrent.ThreadPoolExecutor$Worker@32018916
+
+
+"process reaper" daemon prio=10 Id=74 RUNNABLE
+	at java.base@11.0.9.1/java.lang.ProcessImpl$ProcessPipeInputStream.processExited(ProcessImpl.java:677)
+	-  locked java.lang.ProcessImpl$ProcessPipeInputStream@2b974f6c
+	at java.base@11.0.9.1/java.lang.ProcessImpl.lambda$initStreams$1(ProcessImpl.java:397)
+	at java.base@11.0.9.1/java.lang.ProcessImpl$$Lambda$72/0x0000000840128c40.apply(Unknown Source)
+	at java.base@11.0.9.1/java.util.concurrent.CompletableFuture.uniHandle(CompletableFuture.java:930)
+	at java.base@11.0.9.1/java.util.concurrent.CompletableFuture$UniHandle.tryFire(CompletableFuture.java:907)
+	at java.base@11.0.9.1/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:506)
+	at java.base@11.0.9.1/java.util.concurrent.CompletableFuture.complete(CompletableFuture.java:2073)
+	at java.base@11.0.9.1/java.lang.ProcessHandleImpl$1.run(ProcessHandleImpl.java:162)
+	...
+
+	Number of locked synchronizers = 1
+	- java.util.concurrent.ThreadPoolExecutor$Worker@a5b50ae
+
+
+"process reaper" daemon prio=10 Id=73 RUNNABLE
+	at java.base@11.0.9.1/java.lang.ProcessImpl$ProcessPipeInputStream.processExited(ProcessImpl.java:677)
+	-  locked java.lang.ProcessImpl$ProcessPipeInputStream@6754337c
+	at java.base@11.0.9.1/java.lang.ProcessImpl.lambda$initStreams$1(ProcessImpl.java:397)
+	at java.base@11.0.9.1/java.lang.ProcessImpl$$Lambda$72/0x0000000840128c40.apply(Unknown Source)
+	at java.base@11.0.9.1/java.util.concurrent.CompletableFuture.uniHandle(CompletableFuture.java:930)
+	at java.base@11.0.9.1/java.util.concurrent.CompletableFuture$UniHandle.tryFire(CompletableFuture.java:907)
+	at java.base@11.0.9.1/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:506)
+	at java.base@11.0.9.1/java.util.concurrent.CompletableFuture.complete(CompletableFuture.java:2073)
+	at java.base@11.0.9.1/java.lang.ProcessHandleImpl$1.run(ProcessHandleImpl.java:162)
+	...
+
+	Number of locked synchronizers = 1
+	- java.util.concurrent.ThreadPoolExecutor$Worker@6e9b2a69
+
+
+"Netty Epoll Server IO #6" daemon prio=5 Id=72 RUNNABLE
+	at app//io.netty.channel.DefaultChannelPipeline.callHandlerAddedForAllHandlers(DefaultChannelPipeline.java:1146)
+	-  locked io.netty.channel.DefaultChannelPipeline@4bf00284
+	at app//io.netty.channel.DefaultChannelPipeline.invokeHandlerAddedIfNeeded(DefaultChannelPipeline.java:686)
+	at app//io.netty.channel.AbstractChannel$AbstractUnsafe.register0(AbstractChannel.java:510)
+	at app//io.netty.channel.AbstractChannel$AbstractUnsafe.access$200(AbstractChannel.java:423)
+	at app//io.netty.channel.AbstractChannel$AbstractUnsafe$1.run(AbstractChannel.java:482)
+	at app//io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:163)
+	at app//io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:404)
+	at app//io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:313)
+	...
+
+
+"Netty Epoll Server IO #7" daemon prio=5 Id=75 RUNNABLE
+	at app//io.netty.channel.DefaultChannelPipeline.callHandlerAddedForAllHandlers(DefaultChannelPipeline.java:1146)
+	-  locked io.netty.channel.DefaultChannelPipeline@4bbf14f7
+	at app//io.netty.channel.DefaultChannelPipeline.invokeHandlerAddedIfNeeded(DefaultChannelPipeline.java:686)
+	at app//io.netty.channel.AbstractChannel$AbstractUnsafe.register0(AbstractChannel.java:510)
+	at app//io.netty.channel.AbstractChannel$AbstractUnsafe.access$200(AbstractChannel.java:423)
+	at app//io.netty.channel.AbstractChannel$AbstractUnsafe$1.run(AbstractChannel.java:482)
+	at app//io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:163)
+	at app//io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:404)
+	at app//io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:313)
+	...
+
+
+"process reaper" daemon prio=10 Id=77 RUNNABLE
+	at java.base@11.0.9.1/java.lang.ProcessImpl$ProcessPipeInputStream.processExited(ProcessImpl.java:677)
+	-  locked java.lang.ProcessImpl$ProcessPipeInputStream@5a42dec3
+	at java.base@11.0.9.1/java.lang.ProcessImpl.lambda$initStreams$1(ProcessImpl.java:397)
+	at java.base@11.0.9.1/java.lang.ProcessImpl$$Lambda$72/0x0000000840128c40.apply(Unknown Source)
+	at java.base@11.0.9.1/java.util.concurrent.CompletableFuture.uniHandle(CompletableFuture.java:930)
+	at java.base@11.0.9.1/java.util.concurrent.CompletableFuture$UniHandle.tryFire(CompletableFuture.java:907)
+	at java.base@11.0.9.1/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:506)
+	at java.base@11.0.9.1/java.util.concurrent.CompletableFuture.complete(CompletableFuture.java:2073)
+	at java.base@11.0.9.1/java.lang.ProcessHandleImpl$1.run(ProcessHandleImpl.java:162)
+	...
+
+	Number of locked synchronizers = 1
+	- java.util.concurrent.ThreadPoolExecutor$Worker@3ade90c7
+
+
+"JLine Shutdown Hook" prio=5 Id=14 RUNNABLE
+	at app//org.jline.utils.ShutdownHooks.runTasks(ShutdownHooks.java:49)
+	-  locked java.lang.Class@696da30b
+	at app//org.jline.utils.ShutdownHooks.access$000(ShutdownHooks.java:21)
+	at app//org.jline.utils.ShutdownHooks$1.run(ShutdownHooks.java:36)
+
+
+"process reaper" daemon prio=10 Id=76 RUNNABLE
+
+
+
+Stacktrace:
+	at net.minecraft.server.dedicated.ServerHangWatchdog.run(ServerHangWatchdog.java:56) [?:?] {re:classloading}
+	at java.lang.Thread.run(Thread.java:834) [?:?] {}
+
+
+-- Performance stats --
+Details:
+	Random tick rate: 3
+	Level stats: ResourceKey[minecraft:dimension / minecraft:overworld]: players: 0, entities: 296 [alexsmobs:moose:54,alexsmobs:cockroach:36,minecraft:item:28,alexsmobs:raccoon:28,minecraft:zombie:24], block_entities: 31 [minecraft:mob_spawner:12,minecraft:chest:12,minecraft:furnace:6,minecraft:campfire:1], block_ticks: 1172, fluid_ticks: 26, chunk_source: ServerChunkCache: 3729,
+ResourceKey[minecraft:dimension / minecraft:the_nether]: players: 0, entities: 0 [], block_entities: 0 [], block_ticks: 0, fluid_ticks: 0, chunk_source: ServerChunkCache: 0,
+ResourceKey[minecraft:dimension / minecraft:the_end]: players: 0, entities: 0 [], block_entities: 0 [], block_ticks: 0, fluid_ticks: 0, chunk_source: ServerChunkCache: 0,
+ResourceKey[minecraft:dimension / rats:ratlantis]: players: 0, entities: 0 [], block_entities: 0 [], block_ticks: 0, fluid_ticks: 0, chunk_source: ServerChunkCache: 0
+
+-- System Details --
+Details:
+	Minecraft Version: 1.16.4
+	Minecraft Version ID: 1.16.4
+	Operating System: Linux (amd64) version 5.4.0-58-generic
+	Java Version: 11.0.9.1, Ubuntu
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode, sharing), Ubuntu
+	Memory: 332287824 bytes (316 MB) / 952107008 bytes (908 MB) up to 1008730112 bytes (962 MB)
+	CPUs: 4
+	JVM Flags: 0 total; 
+	ModLauncher: 8.0.6+85+master.325de55
+	ModLauncher launch target: fmlserver
+	ModLauncher naming: srg
+	ModLauncher services: 
+		/mixin-0.8.2.jar mixin PLUGINSERVICE 
+		/eventbus-3.0.5-service.jar eventbus PLUGINSERVICE 
+		/forge-1.16.4-35.1.10.jar object_holder_definalize PLUGINSERVICE 
+		/forge-1.16.4-35.1.10.jar runtime_enum_extender PLUGINSERVICE 
+		/forge-1.16.4-35.1.10.jar capability_inject_definalize PLUGINSERVICE 
+		/accesstransformers-2.2.0-shadowed.jar accesstransformer PLUGINSERVICE 
+		/forge-1.16.4-35.1.10.jar runtimedistcleaner PLUGINSERVICE 
+		/mixin-0.8.2.jar mixin TRANSFORMATIONSERVICE 
+		/forge-1.16.4-35.1.10.jar fml TRANSFORMATIONSERVICE 
+	FML: 35.1
+	Forge: net.minecraftforge:35.1.10
+	FML Language Providers: 
+		javafml@35.1
+		minecraft@1
+	Mod List: 
+		forge-1.16.4-35.1.10-server.jar                   |Minecraft                     |minecraft                     |1.16.4              |DONE      |NOSIGNATURE
+		TreeChop-1.16.4-0.11.3.jar                        |treechop                      |treechop                      |0.11.3              |DONE      |NOSIGNATURE
+		decorative_blocks-1.16.4-1.7.2.jar                |Decorative Blocks             |decorative_blocks             |1.7.2               |DONE      |NOSIGNATURE
+		structurize-0.13.96-ALPHA-universal.jar           |Structurize                   |structurize                   |0.13.96-ALPHA       |DONE      |NOSIGNATURE
+		pamhc2trees-1.16.3-1.0.0.jar                      |Pam's HarvestCraft 2 Fruit Tre|pamhc2trees                   |1.0.0               |DONE      |NOSIGNATURE
+		BiomesOPlenty-1.16.4-13.0.0.428-universal.jar     |Biomes O' Plenty              |biomesoplenty                 |1.16.4-13.0.0.428   |DONE      |NOSIGNATURE
+		minecolonies-0.13.437-RELEASE-universal.jar       |Minecolonies                  |minecolonies                  |0.13.437-RELEASE    |DONE      |NOSIGNATURE
+		SpartanWeaponry-1.16.4-2.1.0-beta-3.jar           |Spartan Weaponry              |spartanweaponry               |2.1.0 beta 3        |DONE      |NOSIGNATURE
+		pamhc2crops-1.16.3-1.0.1.jar                      |Pam's HarvestCraft 2 Crops    |pamhc2crops                   |version             |DONE      |NOSIGNATURE
+		jei-1.16.4-7.6.1.65.jar                           |Just Enough Items             |jei                           |7.6.1.65            |DONE      |NOSIGNATURE
+		pamhc2foodextended-1.16.3-1.0.0.jar               |Pam's HarvestCraft 2 Food Exte|pamhc2foodextended            |version             |DONE      |NOSIGNATURE
+		forge-1.16.4-35.1.10-universal.jar                |Forge                         |forge                         |35.1.10             |DONE      |22:af:21:d8:19:82:7f:93:94:fe:2b:ac:b7:e4:41:57:68:39:87:b1:a7:5c:c6:44:f9:25:74:21:14:f5:0d:90
+		supplementaries-0.9.21c.jar                       |Supplementaries               |supplementaries               |0.9.21c             |DONE      |NOSIGNATURE
+		create-mc1.16.3_v0.3e.jar                         |Create                        |create                        |mc1.16.3_v0.3e      |DONE      |NOSIGNATURE
+		pamhc2foodcore-1.16.3-1.0.0.jar                   |Pam's HarvestCraft 2 Food Core|pamhc2foodcore                |version             |DONE      |NOSIGNATURE
+		citadel-1.5.3.jar                                 |Citadel                       |citadel                       |1.5.3               |DONE      |NOSIGNATURE
+		alexsmobs-1.4.1.jar                               |Alex's Mobs                   |alexsmobs                     |1.4.1               |DONE      |NOSIGNATURE
+		rats-7.0.5-1.16.3.jar                             |Rats                          |rats                          |7.0.5               |DONE      |NOSIGNATURE
+		ratlantis-1.0.0-1.16.3.jar                        |Rats: Ratlantis               |ratlantis                     |1.0.0-1.16.3        |DONE      |NOSIGNATURE
+		TravelersBackpack-1.16.4-5.3.8.jar                |Traveler's Backpack           |travelersbackpack             |5.3.8               |DONE      |NOSIGNATURE
+	Crash Report UUID: 55776b01-720f-45d0-9eed-267f30c4e3b6
+	Player Count: 1 / 20; [ServerPlayerEntity['LightningMirage'/129, l='ServerLevel[world]', x=-1328.30, y=57.00, z=-361.30]]
+	Data Packs: vanilla, mod:treechop, mod:decorative_blocks, mod:structurize, mod:pamhc2trees (incompatible), mod:biomesoplenty, mod:minecolonies (incompatible), mod:spartanweaponry, mod:pamhc2crops (incompatible), mod:jei, mod:pamhc2foodextended (incompatible), mod:forge, mod:supplementaries, mod:create (incompatible), mod:pamhc2foodcore (incompatible), mod:citadel (incompatible), mod:alexsmobs, mod:rats, mod:ratlantis, mod:travelersbackpack (incompatible)
+	Is Modded: Definitely; Server brand changed to 'forge'
+	Type: Dedicated Server (map_server.txt)

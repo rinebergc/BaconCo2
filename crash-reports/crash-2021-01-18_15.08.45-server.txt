@@ -1,0 +1,133 @@
+---- Minecraft Crash Report ----
+// Sorry :(
+
+Time: 1/18/21, 3:08 PM
+Description: Exception ticking world
+
+java.lang.OutOfMemoryError: Java heap space
+	at it.unimi.dsi.fastutil.longs.Long2IntLinkedOpenHashMap.rehash(Long2IntLinkedOpenHashMap.java:1827) ~[?:?] {re:classloading}
+	at it.unimi.dsi.fastutil.longs.Long2IntLinkedOpenHashMap.insert(Long2IntLinkedOpenHashMap.java:336) ~[?:?] {re:classloading}
+	at it.unimi.dsi.fastutil.longs.Long2IntLinkedOpenHashMap.put(Long2IntLinkedOpenHashMap.java:344) ~[?:?] {re:classloading}
+	at net.minecraft.world.gen.area.LazyArea.func_202678_a(SourceFile:27) ~[?:?] {re:classloading}
+	at net.minecraft.world.gen.layer.Layer.func_242936_a(SourceFile:23) ~[?:?] {re:classloading}
+	at biomesoplenty.common.world.BOPBiomeProvider.func_225526_b_(BOPBiomeProvider.java:70) ~[biomesoplenty:?] {re:classloading}
+	at net.minecraft.world.biome.BiomeContainer.<init>(SourceFile:87) ~[?:?] {re:classloading}
+	at net.minecraft.world.chunk.storage.ChunkSerializer.func_222656_a(ChunkSerializer.java:70) ~[?:?] {re:classloading}
+	at net.minecraft.world.server.ChunkManager.lambda$chunkLoad$14(ChunkManager.java:480) ~[?:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.world.server.ChunkManager$$Lambda$7314/0x00000008413c3040.get(Unknown Source) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1700) ~[?:?] {}
+	at net.minecraft.util.concurrent.ThreadTaskExecutor.func_213166_h(SourceFile:144) ~[?:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.world.server.ServerChunkProvider$ChunkExecutor.func_213166_h(SourceFile:545) ~[?:?] {re:classloading}
+	at net.minecraft.util.concurrent.ThreadTaskExecutor.func_213168_p(SourceFile:118) ~[?:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.world.server.ServerChunkProvider$ChunkExecutor.func_213168_p(SourceFile:554) ~[?:?] {re:classloading}
+	at net.minecraft.world.server.ServerChunkProvider.func_217234_d(SourceFile:280) ~[?:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.MinecraftServer.func_213205_aW(MinecraftServer.java:721) ~[?:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.server.MinecraftServer.func_213168_p(MinecraftServer.java:710) ~[?:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.util.concurrent.ThreadTaskExecutor.func_213160_bf(SourceFile:103) ~[?:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.MinecraftServer.func_213202_o(MinecraftServer.java:695) ~[?:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.server.MinecraftServer.func_240802_v_(MinecraftServer.java:645) [?:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.server.MinecraftServer.lambda$startServer$0(MinecraftServer.java:232) [?:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.server.MinecraftServer$$Lambda$7054/0x00000008412fd840.run(Unknown Source) [?:?] {}
+	at java.lang.Thread.run(Thread.java:834) [?:?] {}
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Server thread
+Stacktrace:
+	at it.unimi.dsi.fastutil.longs.Long2IntLinkedOpenHashMap.rehash(Long2IntLinkedOpenHashMap.java:1827) ~[?:?] {re:classloading}
+	at it.unimi.dsi.fastutil.longs.Long2IntLinkedOpenHashMap.insert(Long2IntLinkedOpenHashMap.java:336) ~[?:?] {re:classloading}
+	at it.unimi.dsi.fastutil.longs.Long2IntLinkedOpenHashMap.put(Long2IntLinkedOpenHashMap.java:344) ~[?:?] {re:classloading}
+	at net.minecraft.world.gen.area.LazyArea.func_202678_a(SourceFile:27) ~[?:?] {re:classloading}
+	at net.minecraft.world.gen.layer.Layer.func_242936_a(SourceFile:23) ~[?:?] {re:classloading}
+	at biomesoplenty.common.world.BOPBiomeProvider.func_225526_b_(BOPBiomeProvider.java:70) ~[biomesoplenty:?] {re:classloading}
+	at net.minecraft.world.biome.BiomeContainer.<init>(SourceFile:87) ~[?:?] {re:classloading}
+	at net.minecraft.world.chunk.storage.ChunkSerializer.func_222656_a(ChunkSerializer.java:70) ~[?:?] {re:classloading}
+	at net.minecraft.world.server.ChunkManager.lambda$chunkLoad$14(ChunkManager.java:480) ~[?:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.world.server.ChunkManager$$Lambda$7314/0x00000008413c3040.get(Unknown Source) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1700) ~[?:?] {}
+	at net.minecraft.util.concurrent.ThreadTaskExecutor.func_213166_h(SourceFile:144) ~[?:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.world.server.ServerChunkProvider$ChunkExecutor.func_213166_h(SourceFile:545) ~[?:?] {re:classloading}
+	at net.minecraft.util.concurrent.ThreadTaskExecutor.func_213168_p(SourceFile:118) ~[?:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.world.server.ServerChunkProvider$ChunkExecutor.func_213168_p(SourceFile:554) ~[?:?] {re:classloading}
+	at net.minecraft.world.server.ServerChunkProvider.func_217234_d(SourceFile:280) ~[?:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.MinecraftServer.func_213205_aW(MinecraftServer.java:721) ~[?:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.server.MinecraftServer.func_213168_p(MinecraftServer.java:710) ~[?:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+-- Affected level --
+Details:
+	All players: 2 total; [ServerPlayerEntity['BaconBiscuit'/10935, l='ServerLevel[world]', x=348.06, y=61.97, z=-1191.74], ServerPlayerEntity['Cheesewaffle4'/33062, l='ServerLevel[world]', x=835.07, y=64.00, z=-178.82]]
+	Chunk stats: ServerChunkCache: 5236
+	Level dimension: minecraft:overworld
+	Level spawn location: World: (192,72,-156), Chunk: (at 0,4,4 in 12,-10; contains blocks 192,0,-160 to 207,255,-145), Region: (0,-1; contains chunks 0,-32 to 31,-1, blocks 0,0,-512 to 511,255,-1)
+	Level time: 413103 game time, 443161 day time
+	Level name: world
+	Level game mode: Game mode: survival (ID 0). Hardcore: false. Cheats: false
+	Level weather: Rain time: 38892 (now: false), thunder time: 118992 (now: false)
+	Known server brands: forge
+	Level was modded: true
+	Level storage version: 0x04ABD - Anvil
+Stacktrace:
+	at net.minecraft.server.MinecraftServer.func_71190_q(MinecraftServer.java:853) ~[?:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.server.dedicated.DedicatedServer.func_71190_q(DedicatedServer.java:291) ~[?:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.MinecraftServer.func_71217_p(MinecraftServer.java:786) ~[?:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.server.MinecraftServer.func_240802_v_(MinecraftServer.java:641) ~[?:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.server.MinecraftServer.lambda$startServer$0(MinecraftServer.java:232) ~[?:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at java.lang.Thread.run(Thread.java:834) [?:?] {}
+
+
+-- System Details --
+Details:
+	Minecraft Version: 1.16.4
+	Minecraft Version ID: 1.16.4
+	Operating System: Linux (amd64) version 5.4.0-62-generic
+	Java Version: 11.0.9.1, Ubuntu
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode, sharing), Ubuntu
+	Memory: 119340760 bytes (113 MB) / 1008730112 bytes (962 MB) up to 1008730112 bytes (962 MB)
+	CPUs: 4
+	JVM Flags: 0 total; 
+	ModLauncher: 8.0.6+85+master.325de55
+	ModLauncher launch target: fmlserver
+	ModLauncher naming: srg
+	ModLauncher services: 
+		/mixin-0.8.2.jar mixin PLUGINSERVICE 
+		/eventbus-3.0.5-service.jar eventbus PLUGINSERVICE 
+		/forge-1.16.4-35.1.10.jar object_holder_definalize PLUGINSERVICE 
+		/forge-1.16.4-35.1.10.jar runtime_enum_extender PLUGINSERVICE 
+		/forge-1.16.4-35.1.10.jar capability_inject_definalize PLUGINSERVICE 
+		/accesstransformers-2.2.0-shadowed.jar accesstransformer PLUGINSERVICE 
+		/forge-1.16.4-35.1.10.jar runtimedistcleaner PLUGINSERVICE 
+		/mixin-0.8.2.jar mixin TRANSFORMATIONSERVICE 
+		/forge-1.16.4-35.1.10.jar fml TRANSFORMATIONSERVICE 
+	FML: 35.1
+	Forge: net.minecraftforge:35.1.10
+	FML Language Providers: 
+		javafml@35.1
+		minecraft@1
+	Mod List: 
+		forge-1.16.4-35.1.10-server.jar                   |Minecraft                     |minecraft                     |1.16.4              |DONE      |NOSIGNATURE
+		TreeChop-1.16.4-0.11.3.jar                        |treechop                      |treechop                      |0.11.3              |DONE      |NOSIGNATURE
+		decorative_blocks-1.16.4-1.7.2.jar                |Decorative Blocks             |decorative_blocks             |1.7.2               |DONE      |NOSIGNATURE
+		structurize-0.13.96-ALPHA-universal.jar           |Structurize                   |structurize                   |0.13.96-ALPHA       |DONE      |NOSIGNATURE
+		pamhc2trees-1.16.3-1.0.0.jar                      |Pam's HarvestCraft 2 Fruit Tre|pamhc2trees                   |1.0.0               |DONE      |NOSIGNATURE
+		BiomesOPlenty-1.16.4-13.0.0.428-universal.jar     |Biomes O' Plenty              |biomesoplenty                 |1.16.4-13.0.0.428   |DONE      |NOSIGNATURE
+		minecolonies-0.13.437-RELEASE-universal.jar       |Minecolonies                  |minecolonies                  |0.13.437-RELEASE    |DONE      |NOSIGNATURE
+		SpartanWeaponry-1.16.4-2.1.0-beta-3.jar           |Spartan Weaponry              |spartanweaponry               |2.1.0 beta 3        |DONE      |NOSIGNATURE
+		pamhc2crops-1.16.3-1.0.1.jar                      |Pam's HarvestCraft 2 Crops    |pamhc2crops                   |version             |DONE      |NOSIGNATURE
+		jei-1.16.4-7.6.1.65.jar                           |Just Enough Items             |jei                           |7.6.1.65            |DONE      |NOSIGNATURE
+		pamhc2foodextended-1.16.3-1.0.0.jar               |Pam's HarvestCraft 2 Food Exte|pamhc2foodextended            |version             |DONE      |NOSIGNATURE
+		forge-1.16.4-35.1.10-universal.jar                |Forge                         |forge                         |35.1.10             |DONE      |22:af:21:d8:19:82:7f:93:94:fe:2b:ac:b7:e4:41:57:68:39:87:b1:a7:5c:c6:44:f9:25:74:21:14:f5:0d:90
+		supplementaries-0.9.21c.jar                       |Supplementaries               |supplementaries               |0.9.21c             |DONE      |NOSIGNATURE
+		create-mc1.16.3_v0.3e.jar                         |Create                        |create                        |mc1.16.3_v0.3e      |DONE      |NOSIGNATURE
+		pamhc2foodcore-1.16.3-1.0.0.jar                   |Pam's HarvestCraft 2 Food Core|pamhc2foodcore                |version             |DONE      |NOSIGNATURE
+		citadel-1.5.3.jar                                 |Citadel                       |citadel                       |1.5.3               |DONE      |NOSIGNATURE
+		alexsmobs-1.4.1.jar                               |Alex's Mobs                   |alexsmobs                     |1.4.1               |DONE      |NOSIGNATURE
+		rats-7.0.5-1.16.3.jar                             |Rats                          |rats                          |7.0.5               |DONE      |NOSIGNATURE
+		ratlantis-1.0.0-1.16.3.jar                        |Rats: Ratlantis               |ratlantis                     |1.0.0-1.16.3        |DONE      |NOSIGNATURE
+		TravelersBackpack-1.16.4-5.3.8.jar                |Traveler's Backpack           |travelersbackpack             |5.3.8               |DONE      |NOSIGNATURE
+	Crash Report UUID: b61660a3-38c1-446a-8490-45a8507fc81c
+	Player Count: 2 / 20; [ServerPlayerEntity['BaconBiscuit'/10935, l='ServerLevel[world]', x=348.06, y=61.97, z=-1191.74], ServerPlayerEntity['Cheesewaffle4'/33062, l='ServerLevel[world]', x=835.07, y=64.00, z=-178.82]]
+	Data Packs: vanilla, mod:treechop, mod:decorative_blocks, mod:structurize, mod:pamhc2trees (incompatible), mod:biomesoplenty, mod:minecolonies (incompatible), mod:spartanweaponry, mod:pamhc2crops (incompatible), mod:jei, mod:pamhc2foodextended (incompatible), mod:forge, mod:supplementaries, mod:create (incompatible), mod:pamhc2foodcore (incompatible), mod:citadel (incompatible), mod:alexsmobs, mod:rats, mod:ratlantis, mod:travelersbackpack (incompatible)
+	Is Modded: Definitely; Server brand changed to 'forge'
+	Type: Dedicated Server (map_server.txt)

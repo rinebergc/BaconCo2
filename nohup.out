@@ -1,0 +1,175 @@
+2021-01-18 14:02:12,977 main WARN Advanced terminal features are not available in this environment
+[14:02:13] [main/INFO] [cp.mo.mo.Launcher/MODLAUNCHER]: ModLauncher running: args [--gameDir, ., --launchTarget, fmlserver, --fml.forgeVersion, 35.1.10, --fml.mcpVersion, 20201102.104115, --fml.mcVersion, 1.16.4, --fml.forgeGroup, net.minecraftforge, nogui]
+[14:02:13] [main/INFO] [cp.mo.mo.Launcher/MODLAUNCHER]: ModLauncher 8.0.6+85+master.325de55 starting: java version 11.0.9.1 by Ubuntu
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by cpw.mods.modlauncher.SecureJarHandler (file:/home/carter/minecraftserver/libraries/cpw/mods/modlauncher/8.0.6/modlauncher-8.0.6.jar) to field java.util.jar.Manifest.jv
+WARNING: Please consider reporting this to the maintainers of cpw.mods.modlauncher.SecureJarHandler
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+[14:02:13] [main/INFO] [ne.mi.fm.lo.FixSSL/CORE]: Added Lets Encrypt root certificates as additional trust
+[14:02:13] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.2 Source=file:/home/carter/minecraftserver/libraries/org/spongepowered/mixin/0.8.2/mixin-0.8.2.jar Service=ModLauncher Env=SERVER
+[14:02:14] [main/INFO] [STDERR/]: [jdk.nashorn.api.scripting.NashornScriptEngine:<init>:143]: Warning: Nashorn engine is planned to be removed from a future JDK release
+[14:02:15] [main/INFO] [cp.mo.mo.LaunchServiceHandler/MODLAUNCHER]: Launching target 'fmlserver' with arguments [--gameDir, ., nogui]
+[14:02:24] [main/WARN] [mixin/]: @Final field field_76203_h:Ljava/util/Map; in supplementaries.mixins.json:MapMixin should be final
+[14:02:30] [main/INFO] [ne.mi.re.GameData/]: Potentially Dangerous alternative prefix `citadel` for name `debug`, expected `minecraft`. This could be a intended override, but in most cases indicates a broken mod.
+[14:02:30] [main/INFO] [ne.mi.re.GameData/]: Potentially Dangerous alternative prefix `citadel` for name `citadel_book`, expected `minecraft`. This could be a intended override, but in most cases indicates a broken mod.
+[14:02:31] [main/INFO] [ne.mi.re.GameData/]: Potentially Dangerous alternative prefix `rats` for name `synesthesia`, expected `minecraft`. This could be a intended override, but in most cases indicates a broken mod.
+[14:02:31] [main/INFO] [ne.mi.re.GameData/]: Potentially Dangerous alternative prefix `rats` for name `plague`, expected `minecraft`. This could be a intended override, but in most cases indicates a broken mod.
+[14:02:31] [modloading-worker-1/INFO] [Spartan Weaponry/]: Constructing Mod: Spartan Weaponry
+[14:02:31] [modloading-worker-1/INFO] [Spartan Weaponry/]: Initialising API! Version: 5
+[14:02:32] [modloading-worker-0/INFO] [ne.mi.co.ForgeMod/FORGEMOD]: Forge mod loading, version 35.1.10, for MC 1.16.4 with MCP 20201102.104115
+[14:02:32] [modloading-worker-0/INFO] [ne.mi.co.MinecraftForge/FORGE]: MinecraftForge v35.1.10 Initialized
+[14:02:32] [modloading-worker-1/ERROR] [minecraft/Util]: No data fixer registered for arrow_sw
+[14:02:32] [modloading-worker-1/ERROR] [minecraft/Util]: No data fixer registered for arrow_explosive
+[14:02:32] [modloading-worker-1/ERROR] [minecraft/Util]: No data fixer registered for bolt
+[14:02:32] [modloading-worker-1/ERROR] [minecraft/Util]: No data fixer registered for bolt_spectral
+[14:02:32] [modloading-worker-1/ERROR] [minecraft/Util]: No data fixer registered for throwing_weapon
+[14:02:32] [modloading-worker-1/ERROR] [minecraft/Util]: No data fixer registered for tomahawk
+[14:02:32] [modloading-worker-1/ERROR] [minecraft/Util]: No data fixer registered for javelin
+[14:02:32] [modloading-worker-1/ERROR] [minecraft/Util]: No data fixer registered for boomerang
+[14:02:32] [modloading-worker-1/ERROR] [minecraft/Util]: No data fixer registered for dynamite
+[14:02:32] [modloading-worker-0/INFO] [co.si.cr.re.re.AbstractRegistrate/]: Detected new forge version, registering events reflectively.
+[14:02:32] [modloading-worker-2/ERROR] [minecraft/Util]: No data fixer registered for firefly
+[14:02:32] [modloading-worker-2/ERROR] [minecraft/Util]: No data fixer registered for brick_projectile
+[14:02:32] [modloading-worker-3/ERROR] [minecraft/Util]: No data fixer registered for grizzly_bear
+[14:02:33] [modloading-worker-3/ERROR] [minecraft/Util]: No data fixer registered for roadrunner
+[14:02:33] [modloading-worker-3/ERROR] [minecraft/Util]: No data fixer registered for bone_serpent
+[14:02:33] [modloading-worker-3/ERROR] [minecraft/Util]: No data fixer registered for bone_serpent_part
+[14:02:33] [modloading-worker-3/ERROR] [minecraft/Util]: No data fixer registered for gazelle
+[14:02:33] [modloading-worker-3/ERROR] [minecraft/Util]: No data fixer registered for crocodile
+[14:02:33] [modloading-worker-3/ERROR] [minecraft/Util]: No data fixer registered for fly
+[14:02:33] [modloading-worker-3/ERROR] [minecraft/Util]: No data fixer registered for hummingbird
+[14:02:33] [modloading-worker-3/ERROR] [minecraft/Util]: No data fixer registered for orca
+[14:02:33] [modloading-worker-3/ERROR] [minecraft/Util]: No data fixer registered for sunbird
+[14:02:33] [modloading-worker-3/ERROR] [minecraft/Util]: No data fixer registered for gorilla
+[14:02:33] [modloading-worker-3/ERROR] [minecraft/Util]: No data fixer registered for crimson_mosquito
+[14:02:33] [modloading-worker-3/ERROR] [minecraft/Util]: No data fixer registered for mosquito_spit
+[14:02:33] [modloading-worker-3/ERROR] [minecraft/Util]: No data fixer registered for rattlesnake
+[14:02:33] [modloading-worker-3/ERROR] [minecraft/Util]: No data fixer registered for endergrade
+[14:02:33] [modloading-worker-3/ERROR] [minecraft/Util]: No data fixer registered for hammerhead_shark
+[14:02:33] [modloading-worker-3/ERROR] [minecraft/Util]: No data fixer registered for shark_tooth_arrow
+[14:02:33] [modloading-worker-3/ERROR] [minecraft/Util]: No data fixer registered for lobster
+[14:02:33] [modloading-worker-3/ERROR] [minecraft/Util]: No data fixer registered for komodo_dragon
+[14:02:33] [modloading-worker-1/ERROR] [minecraft/Util]: No data fixer registered for rat
+[14:02:33] [modloading-worker-1/ERROR] [minecraft/Util]: No data fixer registered for rat_spawner
+[14:02:33] [modloading-worker-3/ERROR] [minecraft/Util]: No data fixer registered for capuchin_monkey
+[14:02:33] [modloading-worker-3/ERROR] [minecraft/Util]: No data fixer registered for tossed_item
+[14:02:33] [modloading-worker-1/ERROR] [minecraft/Util]: No data fixer registered for pied_piper
+[14:02:33] [modloading-worker-3/ERROR] [minecraft/Util]: No data fixer registered for centipede_head
+[14:02:33] [modloading-worker-1/ERROR] [minecraft/Util]: No data fixer registered for thrown_block
+[14:02:33] [modloading-worker-3/ERROR] [minecraft/Util]: No data fixer registered for centipede_body
+[14:02:33] [modloading-worker-3/ERROR] [minecraft/Util]: No data fixer registered for centipede_tail
+[14:02:33] [modloading-worker-3/ERROR] [minecraft/Util]: No data fixer registered for crocodile_egg
+[14:02:33] [modloading-worker-1/ERROR] [minecraft/Util]: No data fixer registered for plague_doctor
+[14:02:33] [modloading-worker-1/ERROR] [minecraft/Util]: No data fixer registered for purifying_liquid
+[14:02:33] [modloading-worker-1/ERROR] [minecraft/Util]: No data fixer registered for black_death
+[14:02:33] [modloading-worker-3/ERROR] [minecraft/Util]: No data fixer registered for warped_toad
+[14:02:33] [modloading-worker-1/ERROR] [minecraft/Util]: No data fixer registered for plague_cloud
+[14:02:33] [modloading-worker-1/ERROR] [minecraft/Util]: No data fixer registered for plague_beast
+[14:02:33] [modloading-worker-1/ERROR] [minecraft/Util]: No data fixer registered for plague_shot
+[14:02:33] [modloading-worker-1/ERROR] [minecraft/Util]: No data fixer registered for rat_capture_net
+[14:02:33] [modloading-worker-1/ERROR] [minecraft/Util]: No data fixer registered for rat_dragon_fire
+[14:02:33] [modloading-worker-3/ERROR] [minecraft/Util]: No data fixer registered for moose
+[14:02:33] [modloading-worker-1/ERROR] [minecraft/Util]: No data fixer registered for rat_arrow
+[14:02:33] [modloading-worker-3/ERROR] [minecraft/Util]: No data fixer registered for mimicube
+[14:02:33] [modloading-worker-1/ERROR] [minecraft/Util]: No data fixer registered for rat_mount_golem
+[14:02:33] [modloading-worker-1/ERROR] [minecraft/Util]: No data fixer registered for rat_mount_chicken
+[14:02:33] [modloading-worker-1/ERROR] [minecraft/Util]: No data fixer registered for rat_mount_beast
+[14:02:33] [modloading-worker-1/ERROR] [minecraft/Util]: No data fixer registered for rat_king
+[14:02:33] [modloading-worker-1/ERROR] [minecraft/Util]: No data fixer registered for rat_shot
+[14:02:33] [modloading-worker-3/ERROR] [minecraft/Util]: No data fixer registered for raccoon
+[14:02:33] [modloading-worker-3/ERROR] [minecraft/Util]: No data fixer registered for blobfish
+[14:02:33] [modloading-worker-1/ERROR] [minecraft/Util]: No data fixer registered for demon_rat
+[14:02:33] [modloading-worker-1/ERROR] [minecraft/Util]: No data fixer registered for rat_mount_strider
+[14:02:33] [modloading-worker-3/ERROR] [minecraft/Util]: No data fixer registered for seal
+[14:02:33] [modloading-worker-3/ERROR] [minecraft/Util]: No data fixer registered for cockroach
+[14:02:33] [modloading-worker-3/ERROR] [minecraft/Util]: No data fixer registered for cockroach_egg
+[14:02:33] [modloading-worker-3/ERROR] [minecraft/Util]: No data fixer registered for shoebill
+[14:02:33] [modloading-worker-3/ERROR] [minecraft/Util]: No data fixer registered for elephant
+[14:02:33] [modloading-worker-3/ERROR] [minecraft/Util]: No data fixer registered for soul_vulture
+[14:02:33] [modloading-worker-1/ERROR] [minecraft/Util]: No data fixer registered for ratlantean_spirit
+[14:02:33] [modloading-worker-1/ERROR] [minecraft/Util]: No data fixer registered for ratlantean_spirit_flame
+[14:02:33] [modloading-worker-1/ERROR] [minecraft/Util]: No data fixer registered for ratlantean_automaton
+[14:02:33] [modloading-worker-1/ERROR] [minecraft/Util]: No data fixer registered for ratlantean_automaton_beam
+[14:02:33] [modloading-worker-1/ERROR] [minecraft/Util]: No data fixer registered for feral_ratlantean
+[14:02:33] [modloading-worker-1/ERROR] [minecraft/Util]: No data fixer registered for neo_ratlantean
+[14:02:33] [modloading-worker-1/ERROR] [minecraft/Util]: No data fixer registered for laser_beam
+[14:02:33] [modloading-worker-1/ERROR] [minecraft/Util]: No data fixer registered for laser_portal
+[14:02:33] [modloading-worker-1/ERROR] [minecraft/Util]: No data fixer registered for vial_of_sentience
+[14:02:33] [modloading-worker-1/ERROR] [minecraft/Util]: No data fixer registered for pirat_boat
+[14:02:33] [modloading-worker-1/ERROR] [minecraft/Util]: No data fixer registered for pirat
+[14:02:34] [modloading-worker-1/ERROR] [minecraft/Util]: No data fixer registered for cheese_cannonball
+[14:02:34] [modloading-worker-1/ERROR] [minecraft/Util]: No data fixer registered for ghost_pirat
+[14:02:34] [modloading-worker-3/INFO] [co.ti.tr.TravelersBackpack/]: Registered the class com.tiviacz.travelersbackpack.fluids.effects.WaterEffect as a FluidEffect for Water with the ID 0
+[14:02:34] [modloading-worker-3/INFO] [co.ti.tr.TravelersBackpack/]: Registered the class com.tiviacz.travelersbackpack.fluids.effects.LavaEffect as a FluidEffect for Lava with the ID 1
+[14:02:34] [modloading-worker-1/ERROR] [minecraft/Util]: No data fixer registered for dutchrat
+[14:02:34] [modloading-worker-1/ERROR] [minecraft/Util]: No data fixer registered for dutchrat_sword
+[14:02:34] [modloading-worker-1/ERROR] [minecraft/Util]: No data fixer registered for ratfish
+[14:02:34] [modloading-worker-1/ERROR] [minecraft/Util]: No data fixer registered for rattling_gun
+[14:02:34] [modloading-worker-1/ERROR] [minecraft/Util]: No data fixer registered for rattling_gun_bullet
+[14:02:34] [modloading-worker-1/ERROR] [minecraft/Util]: No data fixer registered for ratlantean_ratbot
+[14:02:34] [modloading-worker-1/ERROR] [minecraft/Util]: No data fixer registered for rat_mount_automaton
+[14:02:34] [modloading-worker-1/ERROR] [minecraft/Util]: No data fixer registered for rat_baron
+[14:02:34] [modloading-worker-1/ERROR] [minecraft/Util]: No data fixer registered for rat_baron_plane
+[14:02:34] [modloading-worker-1/ERROR] [minecraft/Util]: No data fixer registered for rat_mount_biplane
+[14:02:34] [modloading-worker-1/ERROR] [minecraft/Util]: No data fixer registered for rat_protector
+[14:02:34] [modloading-worker-1/ERROR] [minecraft/Util]: No data fixer registered for ratlantis_arrow
+[14:02:45] [main/ERROR] [minecraft/Util]: No data fixer registered for minecolonies:citizen
+[14:02:45] [main/ERROR] [minecraft/Util]: No data fixer registered for minecolonies:fishhook
+[14:02:45] [main/ERROR] [minecraft/Util]: No data fixer registered for minecolonies:visitor
+[14:02:45] [main/ERROR] [minecraft/Util]: No data fixer registered for minecolonies:mercenary
+[14:02:45] [main/ERROR] [minecraft/Util]: No data fixer registered for minecolonies:barbarian
+[14:02:45] [main/ERROR] [minecraft/Util]: No data fixer registered for minecolonies:archerbarbarian
+[14:02:45] [main/ERROR] [minecraft/Util]: No data fixer registered for minecolonies:chiefbarbarian
+[14:02:45] [main/ERROR] [minecraft/Util]: No data fixer registered for minecolonies:pirate
+[14:02:45] [main/ERROR] [minecraft/Util]: No data fixer registered for minecolonies:archerpirate
+[14:02:45] [main/ERROR] [minecraft/Util]: No data fixer registered for minecolonies:chiefpirate
+[14:02:45] [main/ERROR] [minecraft/Util]: No data fixer registered for minecolonies:sittingentity
+[14:02:45] [main/ERROR] [minecraft/Util]: No data fixer registered for minecolonies:mcminecart
+[14:02:45] [main/ERROR] [minecraft/Util]: No data fixer registered for minecolonies:mummy
+[14:02:45] [main/ERROR] [minecraft/Util]: No data fixer registered for minecolonies:archermummy
+[14:02:45] [main/ERROR] [minecraft/Util]: No data fixer registered for minecolonies:pharao
+[14:02:45] [main/ERROR] [minecraft/Util]: No data fixer registered for minecolonies:amazon
+[14:02:45] [main/ERROR] [minecraft/Util]: No data fixer registered for minecolonies:amazonchief
+[14:02:45] [main/ERROR] [minecraft/Util]: No data fixer registered for minecolonies:firearrow
+[14:02:45] [main/ERROR] [minecraft/Util]: No data fixer registered for minecolonies:mcnormalarrow
+[14:02:45] [main/ERROR] [minecraft/Util]: No data fixer registered for minecolonies:shieldmaiden
+[14:02:45] [main/ERROR] [minecraft/Util]: No data fixer registered for minecolonies:norsemenarcher
+[14:02:45] [main/ERROR] [minecraft/Util]: No data fixer registered for minecolonies:norsemenchief
+[14:02:45] [main/INFO] [Spartan Weaponry/]: Registering items...
+[14:02:45] [main/INFO] [Spartan Weaponry/]: Items Registered!
+[14:02:46] [main/ERROR] [minecraft/Util]: No data fixer registered for decorative_blocks:dummy
+[14:02:46] [main/INFO] [Spartan Weaponry/]: Registering Entities
+[14:02:47] [main/ERROR] [minecraft/Util]: No data fixer registered for super_glue
+[14:02:47] [main/ERROR] [minecraft/Util]: No data fixer registered for contraption
+[14:02:47] [main/ERROR] [minecraft/Util]: No data fixer registered for stationary_contraption
+[14:02:47] [main/ERROR] [minecraft/Util]: No data fixer registered for seat
+[14:02:47] [main/WARN] [minecraft/EntityDataManager]: defineId called for: class net.minecraft.entity.passive.DolphinEntity from class com.github.alexthe666.alexsmobs.entity.EntityOrca
+[14:02:47] [main/WARN] [minecraft/EntityDataManager]: defineId called for: class com.github.alexthe666.rats.server.entity.ratlantis.EntityFeralRatlantean from class com.github.alexthe666.rats.server.entity.EntityRatBeastMount
+[14:02:47] [main/WARN] [minecraft/EntityDataManager]: defineId called for: class com.github.alexthe666.rats.server.entity.ratlantis.EntityFeralRatlantean from class com.github.alexthe666.rats.server.entity.ratlantis.EntityNeoRatlantean
+[14:02:48] [modloading-worker-3/INFO] [Spartan Weaponry/]: Setting up Spartan Weaponry!
+[14:02:48] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: Global Forge version check system disabled, no further processing.
+[14:02:50] [modloading-worker-1/WARN] [minecolonies/]: FMLLoadCompleteEvent
+[14:02:50] [modloading-worker-1/WARN] [mi.requestsystem/]: Updated logging config. RS Debug logging enabled: false
+[14:02:50] [modloading-worker-1/WARN] [minecolonies/]: Register mappings
+[14:03:05] [main/INFO] [mojang/YggdrasilAuthenticationService]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
+[14:03:05] [main/FATAL] [minecraft/Main]: Failed to start the minecraft server
+net.minecraft.server.SessionLockManager$AlreadyLockedException: /home/carter/minecraftserver/./world/session.lock: already locked (possibly by other Minecraft instance?)
+	at net.minecraft.server.SessionLockManager$AlreadyLockedException.func_233000_a_(SourceFile:98) ~[?:?] {re:classloading}
+	at net.minecraft.server.SessionLockManager.func_232998_a_(SourceFile:44) ~[?:?] {re:classloading}
+	at net.minecraft.world.storage.SaveFormat$LevelSave.<init>(SaveFormat.java:277) ~[?:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.world.storage.SaveFormat.func_237274_c_(SaveFormat.java:265) ~[?:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.server.Main.main(Main.java:116) ~[?:?] {re:classloading}
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?] {}
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:?] {}
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?] {}
+	at java.lang.reflect.Method.invoke(Method.java:566) ~[?:?] {}
+	at net.minecraftforge.fml.loading.FMLServerLaunchProvider.lambda$launchService$0(FMLServerLaunchProvider.java:51) ~[forge-1.16.4-35.1.10.jar:35.1] {}
+	at cpw.mods.modlauncher.LaunchServiceHandlerDecorator.launch(LaunchServiceHandlerDecorator.java:37) [modlauncher-8.0.6.jar:?] {}
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:54) [modlauncher-8.0.6.jar:?] {}
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:72) [modlauncher-8.0.6.jar:?] {}
+	at cpw.mods.modlauncher.Launcher.run(Launcher.java:82) [modlauncher-8.0.6.jar:?] {}
+	at cpw.mods.modlauncher.Launcher.main(Launcher.java:66) [modlauncher-8.0.6.jar:?] {}
+	at net.minecraftforge.server.ServerMain$Runner.runLauncher(ServerMain.java:63) [forge-1.16.4-35.1.10.jar:?] {}
+	at net.minecraftforge.server.ServerMain$Runner.access$100(ServerMain.java:60) [forge-1.16.4-35.1.10.jar:?] {}
+	at net.minecraftforge.server.ServerMain.main(ServerMain.java:57) [forge-1.16.4-35.1.10.jar:?] {}
